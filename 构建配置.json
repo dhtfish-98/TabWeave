@@ -1,0 +1,32 @@
+{
+  "schema": "project-build-layout.v1",
+  "project": "TabWeave",
+  "author": "dhtfish98",
+  "kind": "node",
+  "base_public_commit": "3b579d82dd63cb9919b5679f22b84d27d8e0dc55",
+  "restored_inputs": [
+    {
+      "original": "LICENSE",
+      "stored": "项目文档/LICENSE",
+      "sha256": "dbc0575c7d1eeddd888703b89e469f17441ac9afd502ec38388685d49c37a369"
+    },
+    {
+      "original": "ORIGIN.md",
+      "stored": "项目文档/ORIGIN.md",
+      "sha256": "71c769ac7a7bef9e3cdd55737d3668ea2177df54fa68fd3263af52ac6187dd6c"
+    },
+    {
+      "original": "README.md",
+      "stored": "项目文档/README.md",
+      "sha256": "d999ee3aa00d30ad77258ca4d17aefc8e3e11cc444678737bce4cbde978b2ceb"
+    },
+    {
+      "original": "VALIDATION.md",
+      "stored": "项目文档/VALIDATION.md",
+      "sha256": "8e029331a65b1a0757e0c98a252bc7d0678cfc5338130d8ed4ebe1ec9d69e03d"
+    }
+  ],
+  "platform_entries": [
+    ".github/SECURITY.md"
+  ]
+}
