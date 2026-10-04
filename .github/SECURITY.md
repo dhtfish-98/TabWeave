@@ -15,7 +15,7 @@ through the browser's logged-in sessions.
 ## Reporting
 
 Use GitHub's [private vulnerability
-reporting](https://github.com/dhtfish988/TabWeave/security/advisories/new)
+reporting](https://github.com/dhtfish-98/TabWeave/security/advisories/new)
 for a bypass of those restrictions. Other bugs belong in a normal issue.
 
 Useful in a report: the Node version, the client you drove the server from, and the
