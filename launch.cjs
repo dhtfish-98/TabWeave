@@ -20,5 +20,5 @@ process.on('uncaughtException', failure => {
   if (!ending) finishSession('uncaughtException');
 });
 process.on('unhandledRejection', failure => console.error('[TabWeave MCP] Unhandled Promise rejection:', failure));
-console.error('[TabWeave MCP v4.3] Starting... (54 tools + 21 aliases)');
+console.error('[TabWeave MCP v4.3.1] Starting... (54 tools + 21 aliases)');
 new LineExchange(service.answer).open();

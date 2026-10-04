@@ -1,4 +1,6 @@
-# Rewrite verification
+# Verification
+
+## Historical rewrite verification
 
 The baseline is the exact local source commit recorded in ORIGIN.md.
 
@@ -24,3 +26,21 @@ comparisons varied with browser state. The repeated live run uses a fixed viewpo
 and device scale, seeded random input, animation-frame settlement, and explicit
 visual starting conditions for drag/screenshot. Payloads and screenshot bytes
 match with these controls. The product algorithms were not changed by these controls.
+
+## v4.3.1 notification response fix (2026-10-05 JST)
+
+The public v4.3.0 base is commit
+`bf5d50985c78f88ff1d348ab22d9f1cfe687f5dd`. A new browser-free regression
+feeds a `tools/call` message without `id` through the actual line exchange and
+session dispatcher. Before the one-line guard, this test failed: the output
+contained `"id":undefined` and the browser connection stub was reached. After
+the guard, it emits no line and makes no browser connection. A companion test
+checks that a call with `id: 7` still returns a parseable error response with
+the same identifier. The two focused cases pass; the complete local `npm test`
+suite passes 30/30. The browser dependency is replaced with an in-memory stub;
+these checks do not connect to a real browser or the network.
+
+The change is limited to the `tools/call` missing-`id` branch, two regression
+tests, package/server version metadata and current documentation. The historical
+live Chrome comparison above was not rerun for v4.3.1. Package construction,
+remote CI, release and broader protocol behavior are separate evidence gates.

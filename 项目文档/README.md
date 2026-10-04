@@ -62,13 +62,24 @@ The local regression suite uses a browser stub. Additional rewrite verification
 uses isolated Chrome with synthetic local pages; it does not establish behavior
 on every external site. See `VALIDATION.md`, `ORIGIN.md` and `LICENSE`.
 
+## v4.3.1 notification response fix
+
+A `tools/call` message without its own `id` is treated as a notification: the
+server returns no line and does not connect to the browser or invoke a tool.
+Previously the manual response template inserted JavaScript `undefined` as the
+JSON `id`, producing an unparsable line. Requests with an `id` retain their
+existing responses. The local, browser-free regression and complete test suite
+are recorded in `VALIDATION.md`; earlier live-browser comparisons remain
+historical evidence for their original version.
+
 
 ## Current maintenance record
 
 The current package maintenance name is **dhtfish98**. This package author entry records the present maintenance period. Earlier package/release metadata and historical source-lineage records may retain `bitfish886`; those records are preserved for their original publication periods.
 
-Upstream attribution, third-party notices and licenses remain unchanged. This metadata update does not claim exclusive authorship of inherited material, alter runtime or tests, or change the package version.
-
-Previously recorded engineering issues remain unresolved; this metadata-only update does not claim to repair them.
+Upstream attribution, third-party notices and licenses remain unchanged. The
+maintenance name does not claim exclusive authorship of inherited material.
+The v4.3.1 change addresses only the missing-`id` notification response issue;
+other historical engineering findings require their own review.
 
 Actual task authorization, any effect of safeguards on that task, and CVP application eligibility remain **OPEN**. Package construction and existing engineering evidence do not establish CVP approval.

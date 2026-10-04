@@ -624,7 +624,7 @@ function weaveCreateSession() {
             },
             serverInfo: {
               name: "tabweave",
-              version: '4.3.0'
+              version: '4.3.1'
             }
           }
         };
@@ -639,6 +639,7 @@ function weaveCreateSession() {
           }
         };
       case 'tools/call':
+        if (!Object.hasOwn(weaveMessage, 'id')) return null;
         const {
           name: weaveName,
           arguments: weaveArgs
